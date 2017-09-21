@@ -1,0 +1,306 @@
+* {
+	text-align: center !important;
+}
+
+#home {
+    opacity: .5;
+    outline: none;
+    text-decoration: none;
+	position: fixed; 
+    top: 3%;
+    left: 3%;
+    z-index: 100;
+}
+
+#home:hover {
+	opacity: 1;
+}
+
+#home img {
+	height: 4em;
+	width: 5em;
+}
+
+::selection {
+	background: rgba(1, 1, 1, 0.5);
+	color: #fff;
+}
+::-moz-selection {
+	background: rgba(1, 1, 1, 0.5);
+	color: #fff;
+}
+
+body, html, .page {
+	height: 100%;
+	width: 100%;
+}
+
+body, .page {
+	background-image: url(background.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#source-input, #logo-buttons {
+	width: 80%;
+	height: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 0 30px 5px #fff;
+}
+
+.page {
+	position: relative;
+	text-align: center;
+}
+
+#arrow {
+	position: relative;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.arrow,
+.arrow:before {
+	  position: fixed;
+	  left: 47%;
+}
+
+.arrow {
+	  font-size: 2em !important;
+	  top: 20%;
+}
+
+.arrow:before {
+	  content: "";
+	  font-size: 1em !important;
+	  top: 20%;
+	  animation-duration: 2s;
+	  animation-iteration-count: infinite;
+	  animation-name: arrow;
+}
+
+.modal-content {
+	background-color: rgba(1, 1, 1, 0.5) !important;
+	color: white;
+}
+
+.closing {
+	color: #fff !important;
+}
+
+.closeMe {
+	margin-bottom: 30px;
+}
+
+#myButton {
+	background-color: #696969;
+	border: none;
+}
+
+#myButton:hover {
+	box-shadow: 0 0 30px 5px #fff;
+}
+
+#source {
+	border: none;
+	padding: 5px;
+	font-size: 1.5em;
+	box-shadow: 0 0 30px 5px #fff;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, 0);
+  }
+}
+
+@media (min-width: 600px) {
+	.arrow, .arrow:before {
+		top: 30%;
+	}
+	
+	.arrow {
+		font-size: 3em !important;
+	}
+}
+
+@media (min-width: 768px) {
+	
+	.arrow {
+		font-size: 4em !important;
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px)
+and (max-device-width : 624px) 
+and (orientation : landscape) {
+	
+.logo {
+    max-height: 50px !important;
+	margin: 5px;
+	cursor: pointer;
+}
+	
+	#arrow {
+		margin: 0;
+	}
+	
+	.arrow, .arrow:before {
+		top: 30%;
+	}
+	
+	.arrow {
+		font-size: 1.5em !important;
+	}
+	
+	.device {
+		right: 12 !important;
+		top: 12 !important;
+	}
+	
+}
+
+@media (min-width: 1024px) {
+	.device {
+		font-size: 4em !important;
+		top: 20;
+		right: 20;
+	}
+}
+
+.device {
+	position: fixed;
+	right: 20;
+	top: 20;
+	font-size: 1.75em !important;
+	background-color: transparent;
+	color: white !important;
+	z-index: 100;
+	opacity: .7;
+}
+
+.device:hover {
+	opacity: 1;
+}
+
+.main {
+	height: 100%;
+	width: 100%;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+@-moz-document url-prefix() { 
+	
+    .row {
+		 display: block;
+	}
+	
+	.main {
+		float: left;
+	}
+	
+	@media (max-width: 768px) {
+		.col-6, .main {
+			float: none;
+			width: 100% !important;
+		}
+	}
+}
+
+#logos, #selection {
+	height: 80%;
+	width: 80%;
+	border-radius: 10px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 0 30px 5px #fff;
+}
+
+.logo {
+    max-height: 60px;
+	margin: 10px;
+}
+
+#bbc {
+	box-shadow: 0 0 30px 5px #0D7BA8;
+	opacity: .7;
+}
+
+#bbc:hover {
+	box-shadow: 0 0 35px 8px #0D7BA8;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#cnn {
+	box-shadow: 0 0 30px 5px #CC0000;
+	opacity: .7;
+}
+
+#cnn:hover {
+	box-shadow: 0 0 35px 8px #CC0000;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#abc {
+	box-shadow: 0 0 30px 5px #B3BAC0;
+	opacity: .7;
+}
+
+#abc:hover {
+	box-shadow: 0 0 35px 8px #B3BAC0;
+	opacity: 1;
+	cursor: pointer;
+}
+#guardian {
+	box-shadow: 0 0 30px 5px #005689;
+	opacity: .7;
+}
+
+#guardian:hover {
+	box-shadow: 0 0 35px 8px #005689;
+	opacity: 1;
+	cursor: pointer;
+}
+#business {
+	box-shadow: 0 0 30px 5px #17607D;
+	opacity: .7;
+}
+
+#business:hover {
+	box-shadow: 0 0 35px 8px #17607D;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#reuters {
+	box-shadow: 0 0 30px 5px #FF8000;
+	opacity: .7;
+}
+
+#reuters:hover {
+	box-shadow: 0 0 35px 8px #FF8000;
+	opacity: 1;
+	cursor: pointer;
+}

@@ -1,0 +1,142 @@
+<DOCTYPE! html>
+
+<html>
+
+<head>
+
+	<title>News | API</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="no-margin.css">
+	
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	
+	<script src="bootstrap/jquery-3.2.1.slim.min.js"></script>
+	<script src="bootstrap/popper.min.js"></script>
+	<script src="bootstrap/bootstrap.min.js" ></script>
+	
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+
+<body>
+	
+	<a href="mobile.html" class="device"><i class="fa device fa-mobile" aria-hidden="true"></i></a>
+
+	<div class="container-fluid">
+	
+	<div class="row">
+	
+	<div class="main col-sm-6">
+			
+			<div class="row" id="selection">
+			
+			<col-sm-12><h1>Worldwide News</h1></col-sm-12>
+			
+			<div class="col-sm-12"><h1>Select source from list:</h1></div>
+			
+				<div id="sources" class="col-sm-12">
+				
+				<div class="col-12">
+					
+					<select id="source">
+						
+					</select>
+					
+				</div>
+				
+				<br><br>
+				
+				<div class="col-12">
+					
+					<button id="myButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click me</button>
+					
+				</div>
+					
+				</div>
+				
+<!--				<a id="home" href="http://mjakevicius.co.uk"><img src="logo.png" alt=""></a>-->
+				
+			</div>
+			
+		</div>
+	
+		<div class="main col-sm-6">
+	
+		<div id="logos" class="row">
+		
+		<div class="col-sm-12" id="buttons"><h1>Most popular resources:</h1></div>
+			
+				<div class="col-4">
+					<img src="http://www.bbc.co.uk/apple-touch-icon.png" id="bbc" class="logo rounded img-fluid" data-toggle="modal" data-target="#exampleModal" onclick="bbcNews(); getNews();">
+				</div>
+				
+				<div class="col-4">
+					<img src="https://assets.guim.co.uk/images/apple/1fb57d864c15d7123666c1d799e77a17/apple-touch-icon.png" id="guardian" onclick="guardianUK(); getNews();" class="logo rounded img-fluid" data-toggle="modal" data-target="#exampleModal">
+				</div>
+				
+				<div class="col-4">
+					<img src="http://i.cdn.cnn.com/cnn/.e/img/3.0/global/misc/apple-touch-icon.png" id="cnn" onclick="cnnNews(); getNews();" class="img-fluid rounded logo" data-toggle="modal" data-target="#exampleModal">
+				</div>
+				
+				<div class="col-4">
+					<img src="http://static4.businessinsider.com/assets/images/us/favicons/apple-touch-icon.png?v=BI-US-2017-06-22" id="business" onclick="businessIn(); getNews();" class="logo rounded img-fluid" data-toggle="modal" data-target="#exampleModal">
+				</div>
+				
+				<div class="col-4">
+					<img src="http://mobile.abc.net.au/homepage/mobile/images/homepage/apple-touch-icon-144x144.png" class="logo rounded img-fluid" id="abc" onclick="abcNews(); getNews();" data-toggle="modal" data-target="#exampleModal">
+				</div>
+				
+				<div class="col-4">
+					<img src="http://s1.reutersmedia.net/resources_v3/images/favicon/android-chrome-192x192.png" class="logo rounded img-fluid" id="reuters" onclick="reutersNews(); getNews();" data-toggle="modal" data-target="#exampleModal">
+				</div>
+				
+			</div>
+			
+			</div>
+			
+			
+		</div>
+			
+		</div>
+
+
+	<!-- MODAL -->
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel"></h5>
+			<button type="button" class="close closing" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body container">
+			<div id="article" class="row">
+				
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary closing" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="sources.js"></script>
+	
+<!--CLEAR MODAL DIV-->	
+	
+	<script type="text/javascript">
+		$(".closing").click(function () {
+			$(".closeMe").hide();
+		});
+	</script>
+	
+</body>
+
+</html>
